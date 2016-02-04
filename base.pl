@@ -24,6 +24,10 @@ genitor(ron, tonya).
 genitor(hermione, tonya).
 genitor(tonya, ann).
 genitor(tonya, pat).
+genitor(arthur, ron).
+genitor(arthur, gina).
+genitor(gina, lilly).
+genitor(harry, lilly).
 
 mulher(pam).
 mulher(liz).
@@ -31,10 +35,14 @@ mulher(pat).
 mulher(ann).
 mulher(hermione).
 mulher(tonya).
+mulher(gina).
+mulher(lilly).
 homem(tom).
 homem(bob).
 homem(jim).
 homem(ron).
+homem(arthur).
+homem(harry).
 
 /**
  * Rules
