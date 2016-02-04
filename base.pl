@@ -52,6 +52,8 @@ descendente(X,Z) :- genitor(X,Y), descendente(Y,Z).
 
 irmao(X,Y) :- genitor(Z,X), genitor(Z,Y), homem(X), not(X = Y).
 
+irmaos(X,Y) :- genitor(Z,X), genitor(Z,Y), not(X = Y).
+
 tio(X,Y) :- irmao(X,Z), genitor(Z, Y).
 
 tia(X,Y) :- irma(X,Z), genitor(Z, Y).
@@ -59,3 +61,7 @@ tia(X,Y) :- irma(X,Z), genitor(Z, Y).
 avos_paternos(X,Y) :- genitor(X, Z), genitor(Z, Y), homem(Z).
 
 avos_maternos(X,Y) :- genitor(X, Z), genitor(Z, Y), mulher(Z).
+
+ascendente(Y, X) :- descendente(X, Y).
+
+primos(X, Y) :- irmaos(Z, A), genitor(Z, X), genitor(A, Y), not(X = Y).
